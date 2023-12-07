@@ -1,0 +1,82 @@
+<app-navbar></app-navbar>
+<section class="empresas">
+    <div class="empresas__contenedor">
+        <div class="empresas__contenedor__boxtabla ">
+            <table class="empresas__contenedor__boxtabla__tabla ">
+                <thead class="empresas__contenedor__boxtabla__tabla__thead">
+                    <tr class="">
+                        <th scope="col" class="px-6 py-3">#</th>
+                        <th scope="col" class="px-6 py-3">Empresa</th>
+                        <th scope="col" class="px-6 py-3">Direccion</th>
+                        <th scope="col" class="px-6 py-3">Ruc</th>
+                        <th scope="col" class="px-6 py-3">N°</th>
+                    </tr>
+                </thead>
+                <tbody id="">
+                    <tr *ngFor="let user of users" [class.selected]="user === selectedUser" (click)="selectUser(user)">
+                        <td>{{ user.iduser }}</td>
+                        <td>{{ user.username }}</td>
+                        <td>{{ user.type_user.typeusername }}</td>
+                        <td>{{ user.documento }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="empresas__contenedor__boxdatosEmp">
+            <div class="empresas__contenedor__boxdatosEmp__item">
+                <p class="empresas__contenedor__boxdatosEmp__item--texto1">Año</p>
+                <input type="number" class="" value="2023">
+            </div>
+            <div class="empresas__contenedor__boxdatosEmp__item">
+                <p class="empresas__contenedor__boxdatosEmp__item--texto1">Mes</p>
+                <select name="" id="" class="empresas__contenedor__boxdatosEmp__item--select1">
+                        <option value="">ENERO</option>
+                        <option value="">FEBRERO</option>
+                        <option value="">MARZO</option>
+                        <option value="">ABRIL</option>
+                        <option value="">MAYO</option>
+                        <option value="">JUNIO</option>
+                        <option value="">JULIO</option>
+                        <option value="">AGOSTO</option>
+                        <option value="">SEPTIEMBRE</option>
+                        <option value="">OCTUBRE</option>
+                        <option value="">NOVIEMBRE</option>
+                        <option value="">DICIEMBRE</option>
+                </select>
+            </div>
+            <div class="empresas__contenedor__boxdatosEmp__item">
+                <p class="empresas__contenedor__boxdatosEmp__item--texto1">Sucursal</p>
+                <select name="" id="" class="empresas__contenedor__boxdatosEmp__item--select2">
+                        <option value="">ENERO</option>
+                        <option value="">FEBRERO</option>
+                        <option value="">MARZO</option>
+                        <option value="">ABRIL</option>
+                        <option value="">MAYO</option>
+                        <option value="">JUNIO</option>
+                        <option value="">JULIO</option>
+                        <option value="">AGOSTO</option>
+                        <option value="">SEPTIEMBRE</option>
+                        <option value="">OCTUBRE</option>
+                        <option value="">NOVIEMBRE</option>
+                        <option value="">DICIEMBRE</option>
+                </select>
+                
+            </div>
+        </div>
+        <hr>
+        <div class="empresas__contenedor__boxbuscar">
+            <div>
+                <button><i class="fa-solid fa-magnifying-glass C-blue"></i>Buscar</button>
+                <button><i class="fa-solid fa-lock C-gray"></i></button>
+            </div>
+            <div>
+                <button (click)="aceptar()"><i class="fa-solid fa-check C-green"></i>Aceptar</button>
+                <button><i class="fa-solid fa-xmark C-red"></i>Cancelar</button>
+            </div>
+        </div>
+
+        
+    </div>
+
+</section>
+<app-footer></app-footer>

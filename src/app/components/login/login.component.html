@@ -1,0 +1,20 @@
+<div class="wrapper">
+    <div class="body" *ngIf="!loading">
+        <h1><i class="fa-solid fa-user-shield"></i> Log In</h1>
+        <div class="form-group">
+            <div class="form-floating mb-3">
+                <input type="email" [(ngModel)]="username" class="form-control ay" id="floatingInput" placeholder="Usuario">
+                <label for="floatingInput">Usuario</label>
+            </div>
+            <div class="form-floating mb-3 mt-3">
+                <input type="password" [(ngModel)]="password" class="form-control" id="floatingPassword" placeholder="Password" autocomplete="off">
+                <label for="floatingPassword">Password</label>
+            </div>
+            <div class="d-grid gap-2">
+                <button type="button" class="btn btn-dark" (click)="login()">Iniciar Sesión</button>
+            </div>
+            <p class="mt-2">¿No tienes cuenta? <a routerLink="/signIn">Registrar</a></p>
+        </div>
+    </div>
+    <app-spinner *ngIf="loading"></app-spinner>
+</div>

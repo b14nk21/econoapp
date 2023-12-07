@@ -1,0 +1,103 @@
+.empresas{
+    display: flex;
+    justify-content: center;
+    min-height: calc(100vh - 11.9em);
+    &__contenedor{
+        width: 60em;
+        padding: 3em;
+
+        &__boxtabla{
+            height: 30em;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 3.5em;
+            &__tabla{
+                width: 100%;
+                
+                text-align: center;
+                color: gray;
+                border: 2px solid black;
+                &__thead{
+                    font-size: 1em;
+                    color: rgb(12, 12, 12);
+                    text-transform: uppercase;
+                    tr{
+                        background-color: rgb(190, 190, 236);
+                        
+                        th{
+                            border: 1px solid black;
+                        }
+                    }
+                    
+                }
+            }
+            
+        }
+        &__boxdatosEmp{
+            display: flex;
+            column-gap: 2em;
+            justify-content:space-between;
+            padding-bottom: 3em;
+            &__item{
+                display: flex;
+                column-gap: 0.5em;
+                align-items: center;
+                &--texto1{
+                    font-size: 1.5em;
+                    color: rgb(42, 42, 128);
+                    font-family: Arial, Helvetica, sans-serif;
+                }
+                input{
+                    width: 4em;
+                    font-size: 1.5em;
+                    font-family:Arial, Helvetica, sans-serif;
+                    text-align: center;
+                }
+                &--select1{
+                    width: 7em;
+                    text-align: center;
+                    font-size: 1.5em;
+                    option{
+                        font-size: 1em;
+                        font-family: Arial, Helvetica, sans-serif;
+                    }
+                }
+                &--select2{
+                    width: 14em;
+                    text-align: center;
+                    font-size: 1.5em;
+                    option{
+                        font-size: 1em;
+                        font-family: Arial, Helvetica, sans-serif;
+                    }
+                }
+            }
+        }
+        hr{
+            margin: 1em 0em;
+            height: .15em;
+            background-color: rgb(24, 23, 23);
+        }
+        &__boxbuscar{
+            display: flex;
+            justify-content: space-between;
+            div{
+                button{
+                    width: 7em;
+                    height: 2em;
+                    background-color: rgb(237, 228, 228);
+                    border-radius: .3em;
+                    border: .1em gray solid;
+                    font-size: 1.2em;
+                    i{
+                        padding-right: .5em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.selected {
+    background-color: #e0e0e0; /* Color de fondo para resaltar la fila seleccionada */
+}

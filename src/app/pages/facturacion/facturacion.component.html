@@ -1,0 +1,170 @@
+<app-navbar></app-navbar>
+<div class="nav1__contenedor1__boxNEmpresa">
+    <h3 class="nav1__contenedor1__boxNEmpresa--titulo1">{{ iduser }}: {{ empresaNombre }}</h3>
+</div>
+<section class="herramientasVentas">
+    <div class="herramientasVentas__box">
+        <div class="herramientasVentas__box__opciones">
+            <button><i class="fa-solid fa-circle-check C-green"></i>Guardar</button>
+            <button><i class="fa-solid fa-circle-user C-gray"></i>Cliente</button>
+            <button><i class="fa-solid fa-database C-peru"></i>Detalle</button>
+            <button><i class="fa-solid fa-circle-question C-blue"></i>Ayuda</button>
+        </div>
+        <div class="herramientasVentas__box__opciones">
+            <button><i class="fa-solid fa-circle-xmark C-red"></i>Cancelar</button>
+        </div>
+    </div>
+</section>
+<section class="facturacion">
+    <div class="facturacion__box">
+        <div class="facturacion__box__item1">
+            <div>
+                <label for="">Emision :</label>
+                <input type="date">
+            </div>
+            <div>
+                <label for="">Forma de pago :</label>
+                <select name="" id="">
+                    <option value="">CONTADO</option>
+                    <option value="">FP2</option>
+                    <option value="">FP3</option>
+                </select>
+            </div>
+            <div>
+                <label for="">Medio de pago :</label>
+                <select name="" id="">
+                    <option *ngFor="let met_pago of met_pagos">{{ met_pago.met_pago_name }}</option>
+                </select>
+            </div>
+        </div>
+        <div class="facturacion__box__item1">
+            <div>
+                <label for="">Documento :</label>
+                <select name="" id="">
+                    <option value="">FACTURA</option>
+                    <option value="">BOLETA</option>
+                    <option value="">FP3</option>
+                </select>
+            </div>
+            <div>
+                <input type="text">
+            </div>
+            <div>
+                <input type="text">
+            </div>
+            <div>
+                <label for="">Cancelacion :</label>
+                <input type="date">
+            </div>
+            <div>
+                <a href="">...</a>
+            </div>
+        </div>
+        <div class="facturacion__box__item1">
+            <div>
+                <label for="">RUC :</label>
+                <input type="text">
+            </div>
+            <div>
+                <a href="">...</a>
+            </div>
+            <div>
+                <label for="">Tiquetera S/N :</label>
+                <input type="text">
+            </div>
+            <div>
+                <label for="">Tipo de Moneda :</label>
+                <select name="" id="">
+                    <option value="">M. NACIONAL</option>
+                    <option value="">TM1</option>
+                    <option value="">TM2</option>
+                </select>
+            </div>
+            <div>
+                <label for="">Tipo de Cambio :</label>
+                <input type="text">
+            </div>
+        </div>
+        <div class="facturacion__box__item1">
+            <div>
+                <label for="">Cliente :</label>
+                <input type="text">
+            </div>
+            
+            <div>
+                <label for="">Debe :</label>
+                <input type="text">
+            </div>
+            <div>
+                <label for="">Facturas y Boletas por Cobrar :</label>
+                <input type="text">
+            </div>
+        </div>
+        <div class="facturacion__box__item1">
+            <div>
+                <label for="">Direccion :</label>
+                <input type="text">
+            </div>
+            
+            <div>
+                <label for="">Haber :</label>
+                <input type="text">
+            </div>
+            <div>
+                <label for="">Efectivo equivalente de Efectivo :</label>
+                <input type="text">
+            </div>
+            <div>
+                <label for="">Cheque :</label>
+                <input type="text">
+            </div>
+        </div>
+        <div class="facturacion__box__contend">
+            <table class="facturacion__box__contend__tabla">
+                <thead>
+                    <tr>
+                        <th class="">  </th>
+                        <th class="">T</th>
+                        <th class="">Producto</th>
+                        <th class="">Unidad</th>
+                        <th class="">Cantidad</th>
+                        <th class="">P. Unitario</th>
+                        <th class="">%Percep.</th>
+                        <th class="">VV</th>
+                        <th class="">IGV</th>
+                        <th class="">Total</th>
+                        <th class="">C/S IGV</th>
+                        <th class="">Cuenta</th>
+                        <th class="">Descripcion Cuenta</th>
+                    </tr>
+                </thead>
+                <tbody id="">
+                    <tr class="">
+                        <td scope="row" class="">
+
+                        </td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="facturacion__box__detalle">
+            <div class="facturacion__box__detalle__item1">
+                <p>Detraccion</p>
+                <div>
+                    <label for="">N° Deposito</label>
+                    <input type="text">
+                </div>
+                <div>
+                    <label for="">Fecha</label>
+                    <input type="date">
+                </div>
+            </div>
+            <div class="facturacion__box__detalle__item2">
+                <input type="checkbox">
+                <p>Perception</p>
+            </div>
+        </div>
+    </div>
+</section>
+<app-footer></app-footer>

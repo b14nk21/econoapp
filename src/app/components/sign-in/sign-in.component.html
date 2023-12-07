@@ -1,0 +1,24 @@
+<div class="wrapper">
+    <div class="body" *ngIf="!loading">
+        <h1><i class="fa-solid fa-user-plus"></i> Registrar</h1>
+        <div class="form-group">
+            <div class="form-floating mb-3">
+                <input type="email" [(ngModel)]="username" class="form-control" id="floatingInput" placeholder="Usuario">
+                <label for="floatingInput">Usuario</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="password" [(ngModel)]="password" class="form-control" id="floatingPassword" placeholder="Password" autocomplete="off">
+                <label for="floatingPassword">Password</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="password" [(ngModel)]="confirmPassword" class="form-control" id="floatingPassword" placeholder="Repetir Password" autocomplete="off">
+                <label for="floatingPassword">Repetir Password</label>
+            </div>
+            <div class="d-grid gap-2">
+                <button type="button" (click)="addUser()" class="btn btn-dark">Registrar Usuario</button>
+            </div>
+        </div>
+        <p class="mt-2"><a routerLink="/login">Volver</a></p>
+    </div>
+    <app-spinner *ngIf="loading"></app-spinner>
+</div>

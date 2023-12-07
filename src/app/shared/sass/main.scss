@@ -1,0 +1,17 @@
+@import "./base/base";
+@import "./base/constantes";
+
+@import "modulos/general/nav.scss";
+@import "modulos/general/navegador.scss";
+
+@import "modulos/empresas/empresas.scss";
+
+@import "modulos/facturacion/facturacion";
+@import "modulos/facturacion/herramientas";
+
+@import "modulos/pointSale/navbar-side.scss";
+@import "modulos/pointSale/pointSale.scss";
+// @import "modules/app1/empresas.scss";
+// @import "modules/app1/footer.scss";
+// @import "modules/app2/herramientasVentas.scss";
+// @import "modules/app2/facturacion.scss";

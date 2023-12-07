@@ -1,0 +1,22 @@
+.herramientasVentas{
+    border-bottom: .1em black solid;
+    &__box{
+        display: flex;
+        justify-content: space-between;
+        padding: .5em 1.5em;
+        &__opciones{
+            button{
+                height: 5em;
+                width: 6em;
+                background-color: rgb(223, 212, 212);
+                font-size: 1.2em;
+                border: .1em gray solid;
+                border-radius: .2em;
+                i{
+                    display: block;
+                    font-size: 2em;
+                }
+            }
+        }
+    }
+}

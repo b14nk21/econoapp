@@ -1,0 +1,29 @@
+.navegador{
+    background-color: rgb(180, 180, 238);
+    padding: 1em 1.5em 0em 1.5em;
+    &__contenedor{
+        &__menu{
+            display: flex;
+            &__item{
+                
+                &--link{
+                    background-color: white;
+                    font-family: $font-mont;
+                    font-size: 1.5em;
+                    padding: 0.5em;
+                    border-radius: 0.3em 0.3em 0em 0em;
+                    border: 0.1em solid rgb(230, 223, 223);
+                    color: black;
+                    &:hover{
+                        background-color: rgb(36, 44, 119);
+                        color: #f3f0e9;
+                        transition: all .3s;
+                    }
+                    i{
+                        margin-right: .2em;
+                    }
+                }
+            }
+        }
+    }
+}
