@@ -5,7 +5,7 @@
 <section class="herramientasVentas">
     <div class="herramientasVentas__box">
         <div class="herramientasVentas__box__opciones">
-            <button><i class="fa-solid fa-circle-check C-green"></i>Guardar</button>
+            <button><i class="fa-solid fa-circle-check C-green" (click)="agregarVenta()"></i>Guardar</button>
             <button><i class="fa-solid fa-circle-user C-gray"></i>Cliente</button>
             <button><i class="fa-solid fa-database C-peru"></i>Detalle</button>
             <button><i class="fa-solid fa-circle-question C-blue"></i>Ayuda</button>
@@ -63,7 +63,7 @@
         <div class="facturacion__box__item1">
             <div>
                 <label for="">RUC :</label>
-                <input type="text">
+                <input type="text" [(ngModel)]="idcliente">
             </div>
             <div>
                 <a href="">...</a>
@@ -90,7 +90,7 @@
                 <label for="">Cliente :</label>
                 <input type="text">
             </div>
-            
+
             <div>
                 <label for="">Debe :</label>
                 <input type="text">
@@ -105,7 +105,7 @@
                 <label for="">Direccion :</label>
                 <input type="text">
             </div>
-            
+
             <div>
                 <label for="">Haber :</label>
                 <input type="text">
@@ -119,11 +119,60 @@
                 <input type="text">
             </div>
         </div>
+        <div>
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="column" class="table-dark"> </th>
+                        <th scope="column" class="table-dark">T</th>
+                        <th scope="column" class="table-dark">Producto</th>
+                        <th scope="column" class="table-dark">Unidad</th>
+                        <th scope="column" class="table-dark">Cantidad</th>
+                        <th scope="column" class="table-dark">P. Unitario</th>
+                        <th scope="column" class="table-dark">%Percep.</th>
+                        <th scope="column" class="table-dark">VV</th>
+                        <th scope="column" class="table-dark">IGV</th>
+                        <th scope="column" class="table-dark">Total</th>
+                        <th scope="column" class="table-dark">C/S IGV</th>
+                        <th scope="column" class="table-dark">Cuenta</th>
+                        <th scope="column" class="table-dark">Descripcion Cuenta</th>
+                        <th scope="column" class="table-dark">Opciones</th>
+                    </tr>
+                </thead>
+                <tbody id="">
+                    <tr class="">
+                        <td scope="row" class="">-</td>
+                        <td scope="row" class="">-</td>
+                        <td scope="row" class="">
+                            <input type="text" id="productoInput" [(ngModel)]="selectedProductName" list="productos" (change)="onProductSelected()">
+                            <datalist id="productos">
+                                <option *ngFor="let product of products" [value]="product.name">
+                            </datalist>
+                        </td>
+                        <td scope="row" class="">-</td>
+                        <td scope="row" class="">
+                            <input type="number" id="cantidadInput" width="50px" [(ngModel)]="cantidadModel" (change)="onCantidadChange()">
+                        </td>
+                        <td scope="row" class="">{{ cadprice }}</td>
+                        <td scope="row" class="">{{ cadpercep }}</td>
+                        <td scope="row" class="">{{ cadpricevv }}</td>
+                        <td scope="row" class="">{{ cadpriceigv }}</td>
+                        <td scope="row" class="">{{ cadtotal }}</td>
+                        <td scope="row" class="">{{ cadpricecsigv }}</td>
+                        <td scope="row" class=""></td>
+                        <td scope="row" class="">
+                            <input type="text" name="" id="" [(ngModel)]="description">
+                        </td>
+                        <td scope="row" class=""><button type="button" class="btn btn-success" (click)="agregarFila()">Añadir</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
         <div class="facturacion__box__contend">
             <table class="facturacion__box__contend__tabla">
                 <thead>
                     <tr>
-                        <th class="">  </th>
+                        <th class=""> </th>
                         <th class="">T</th>
                         <th class="">Producto</th>
                         <th class="">Unidad</th>
@@ -139,11 +188,20 @@
                     </tr>
                 </thead>
                 <tbody id="">
-                    <tr class="">
-                        <td scope="row" class="">
-
-                        </td>
-
+                    <tr class=""  *ngFor="let producto of productosSeleccionados; let i = index">
+                        <td scope="row" class="">-</td>
+                        <td scope="row" class="">{{ i + 1 }}</td>
+                        <td scope="row" class="">{{ producto.producto }}</td>
+                        <td scope="row" class="">-</td>
+                        <td scope="row" class="">{{ producto.cantidad }}</td>
+                        <td scope="row" class="">{{ producto.price }}</td>
+                        <td scope="row" class="">{{ producto.percep }}</td>
+                        <td scope="row" class="">{{ producto.vv }}</td>
+                        <td scope="row" class="">{{ producto.igv }}</td>
+                        <td scope="row" class="">{{ producto.total_par }}</td>
+                        <td scope="row" class="">{{ producto.csigv }}</td>
+                        <td scope="row" class="">-</td>
+                        <td scope="row" class="">{{ producto.descripcion }}</td>
                     </tr>
                 </tbody>
             </table>

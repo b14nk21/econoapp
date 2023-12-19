@@ -16,10 +16,11 @@ export class ProductService {
   }
 
   getProducts (): Observable<Product[]> {
-    // const token = localStorage.getItem('token')
-    // const headers = new HttpHeaders().set('Authorization',`Bearer ${token}`)
-    // return this.http.get<Product[]>(`${this.myAppUrl}${this.myApiUrl}`, { headers: headers })
     return this.http.get<Product[]>(`${this.myAppUrl}${this.myApiUrl}`)
+  }
+
+  getProductByID(id: number): Observable<Product> {
+    return this.http.get<Product>(`${this.myAppUrl}${this.myApiUrl}/${id}`);
   }
 
 }
